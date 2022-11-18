@@ -30,7 +30,6 @@ id: string ='';
 
 BuscarProducto(){
   this.servicioProducto.ObtenerRegistrosPorid(this.id).subscribe((datos: ModeloProdcto)=>{
-
   this.fgValidador.controls["id"].setValue(this.id);
   this.fgValidador.controls["nombre"].setValue(datos.nombre);
    this.fgValidador.controls["precio"].setValue(datos.precio);

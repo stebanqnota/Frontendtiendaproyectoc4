@@ -15,7 +15,8 @@ export class CrearProductoComponent implements OnInit {
     'nomre':['', [Validators.required]],
     'precio': ['',[Validators.required]],
     'imagen': ['',[Validators.required]]
-  })
+  });
+
   constructor(private fb: FormBuilder,
     private servicioProducto: ProductoService,
     private router: Router) { }
@@ -32,7 +33,7 @@ GuardarProducto(){
   p.precio = precio;
   p.imagen = imagen;
 this.servicioProducto.CrearProducto(p).subscribe((datos: ModeloProdcto)=>{
-  //alert("Producto almacenado correctamente")
+  alert("Producto almacenado correctamente")
 this.router.navigate(["/administracion/listar-productos"])
 }, (error: any)=>{
   alert("error almacenando el producto")
