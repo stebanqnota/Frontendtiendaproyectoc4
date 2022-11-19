@@ -14,7 +14,7 @@ export class EditarProductoComponent implements OnInit {
 id: string ='';
   fgValidador: FormGroup = this.fb.group({
     'id':['', [Validators.required]],
-    'nomre':['', [Validators.required]],
+    'nombre':['', [Validators.required]],
     'precio': ['',[Validators.required]],
     'imagen': ['',[Validators.required]]
   })
